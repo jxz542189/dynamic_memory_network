@@ -1,0 +1,32 @@
+{
+  "data":{
+    "base_path":"data/",
+    "task_path":"en-10/",
+    "task_id":1,
+    "PAD_ID":0
+  },
+  "model":{
+    "batch_size": 16,
+    "use_pretrained": true,
+    "embed_dim":50,
+    "encoder_type":"UNI",
+    "cell_type":"GRU",
+    "num_layers":1,
+    "num_units":32,
+    "memory_hob":3,
+    "dropout":0.0,
+    "reg_scale":0.001
+  },
+  "train":{
+    "learning_rate":0.0001,
+    "optimizer":"Adam",
+    "train_steps":100000,
+    "model_dir":"logs/bAbi_task1",
+    "save_checkpoints_steps":1000,
+    "check_hook_n_iter":1000,
+    "min_eval_frequency":1000,
+
+    "print_verbose":false,
+    "debug":false
+  }
+}

@@ -41,7 +41,7 @@ class Graph(object):
                 def get_encoded_fact(i):
                     nonlocal input_mask
 
-                    mask_lengths = tf.reduce_sum(tf.to_int32(tf.not_equal(input_mask[1],
+                    mask_lengths = tf.reduce_sum(tf.to_int32(tf.not_equal(input_mask[i],
                                                                           Config.data.PAD_ID)), axis=0)
                     input_mask_temp = tf.boolean_mask(input_mask[i], tf.sequence_mask(mask_lengths, max_mask_length))
 
